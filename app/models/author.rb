@@ -1,2 +1,11 @@
 class Author < ApplicationRecord
-end
+    has_many :posts
+  
+    # add this:
+    has_one :profile
+  end
+  
+  class Profile < ApplicationRecord
+    # add this:
+    belongs_to :author
+  end
